@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor</title>
+  <link rel="styleSheet" href="styles.css"></link>
+</head>
+<body class="flex">
+  <div class="canvas-cnt flex">
+    <div class="canvas-btns-cnt flex">
+      <canvas id="myCanvas"></canvas>
+      <div class="btns">
+      <button id="animate" onclick="editor.animate()">Animate</button>
+      <button id="load" onclick="editor.load()">Load</button>
+      <button id="save" onclick="editor.save()">Save</button>
+    </div>
+  </div>
+    <div class="flex" style="flex-direction: column; align-items: start;">
+      <div class="list-header flex"> 
+        <span class="minus">-</span>
+        <span class="plus">+</span>
+        <span class="length" style="font-size: 1.2rem;">length</span>
+        <button id="remove" onclick="removeSelected()">🗑️</button> 
+      </div>
+      <div id="keyList" class="list-cnt flex">
+      </div>
+    </div>
+  </div>
+  <div class="input_box" id="inputBox">
+    <div>
+      <label>Keys</label>
+      <input id="plus" /> 
+      <input id="minus" />
+    </div>
+    <div class="max-min-cnt">
+      <input type="number" id="max"/>
+      <input type="number" id="min" />
+      <br>
+      <label style="margin-left: 5px">Max__Min</label>
+    </div>
+    <button id="inputBtn">ok</button>
+  </div>
+  <br>
+  
+  
+  <script src="physics.js"></script>
+  <script src="editor.js"></script>
+  <script src="segment.js"></script>
+  <script src="math.js"></script>
+  <script src="particle.js"></script>
+  <script src="script.js"></script>
+  <script src="components.js"></script>
+  <script src="eventListeners.js"></script>
+</body>
+</html>
