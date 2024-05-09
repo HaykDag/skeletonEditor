@@ -102,6 +102,10 @@ button:hover {
   color: gold;
 }
 
+#speed {
+  width: 150px;
+}
+
 .input_box {
   display: none;
   background-color: lightblue;

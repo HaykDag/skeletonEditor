@@ -6,7 +6,11 @@ const minusKey = document.getElementById('minus');
 const inputMin = document.getElementById('min');
 const inputMax = document.getElementById('max');
 const inputBtn = document.getElementById('inputBtn');
+const speedSlider = document.getElementById('speed');
 
+speedSlider.onchange = (e)=>{
+  physics.speed = Number(e.target.value);
+}
 
 inputBtn.onclick = ()=>{  
   const pKey = plusKey.value.toLowerCase();

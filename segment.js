@@ -14,8 +14,8 @@ class Segment{
   }
 
   update(){
-    if(this.maxOn && this.length<this.maxLength) this.length +=3;
-    if(this.minOn && this.length>this.minLength) this.length -=3;
+    if(this.maxOn && this.length<this.maxLength) this.length += physics.speed;
+    if(this.minOn && this.length>this.minLength) this.length -= physics.speed;
     if(this.maxOn || this.minOn) {
       const lengthSpan = document.getElementById(this.index).lastChild
       lengthSpan.innerText = Math.floor(this.length);

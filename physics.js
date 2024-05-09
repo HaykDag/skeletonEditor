@@ -1,9 +1,10 @@
 class Physics {
-  static G = {x:0,y:0.08}
+  static G = {x:0,y:0.08};
   constructor(ctx) {
     this.particles = [];
     this.segments = [];
     this.ctx = ctx;
+    this.speed = 2;
   }
 
   update(canvas) {
