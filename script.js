@@ -13,14 +13,8 @@ const eventKeys = {};//{key: color}
 
 /*
 const dog = new Image();
-dog.src = '/img/dog.jpg';
-
-const person1 = new Image();
-person1.src = '/img/person_1.png';
+dog.src = '/img/dog.png';
 */
-const person2 = new Image();
-person2.src = 'img/person_2.png';
-
 
 const editor = new Editor(canvas);
 const physics = new Physics(ctx);
@@ -30,7 +24,9 @@ loop();
 function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   //const center = getSkeletonCenter(physics.particles);
-  //ctx.drawImage(dog,0,0);
+  // ctx.globalAlpha = 0.5;
+  // ctx.drawImage(dog,0,0,550,200,190,90,550,300);
+  // ctx.globalAlpha = 1;
   //ctx.drawImage(person2,10,20,251-40,431-80,0,0,canvas.width,canvas.height);
   
   physics.update(canvas);
@@ -49,7 +45,7 @@ function removeSelected(){
   selectedDiv.parentNode.removeChild(selectedDiv);
   const seg = physics.segments[selectedSeg];
   seg.color = null;
-  seg.keys = null;
+  seg.keys = [];
   seg.selected = false;
   seg.index = null;
   selectedSeg = null;

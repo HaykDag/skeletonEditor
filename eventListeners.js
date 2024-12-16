@@ -145,7 +145,7 @@ document.addEventListener('keydown',(e)=>{
   if(inputBox.style.display === 'flex') return;
   
   for(const seg of physics.segments){
-    if(seg.keys.length>0){
+    if(seg && seg.keys.length>0){
       if(seg.keys[0] == e.key.toLowerCase()) seg.minOn = true;
       if(seg.keys[1] == e.key.toLowerCase()) seg.maxOn = true;
     }

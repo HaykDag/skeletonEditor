@@ -95,7 +95,8 @@ class Editor{
     keyList.innerHTML = ''; 
     const animateBnt = document.getElementById('animate');
     animateBnt.innerText = 'Animate';
-    const data = localStorage.getItem('skeleton');
+    const data = localStorage.getItem('skeleton') || dogData;
+    
     if(data){
       const {particles,segments} = JSON.parse(data);
       for(const p of particles){
